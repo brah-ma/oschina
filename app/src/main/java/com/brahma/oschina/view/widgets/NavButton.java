@@ -26,9 +26,6 @@ public class NavButton extends FrameLayout {
     @BindView(R.id.nav_dot)
     TextView mTvDot;
 
-    private Fragment mFragment;
-    private Class<?> mClass;
-
     public NavButton(Context context){
         this(context,null);
 
@@ -54,11 +51,9 @@ public class NavButton extends FrameLayout {
         mTvDot.setText(String.valueOf(count));
     }
 
-    public void init(@DrawableRes int resId, @StringRes int strId, Class<?> cls){
+    public void init(@DrawableRes int resId, @StringRes int strId){
         mIvIcon.setImageResource(resId);
         mTvTitle.setText(strId);
-        mClass=cls;
     }
-
 
 }

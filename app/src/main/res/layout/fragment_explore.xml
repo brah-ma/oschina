@@ -1,13 +1,206 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.brahma.oschina.view.fragments.ExploreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <include layout="@layout/layout_frag_title" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="25dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_git"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_discover_git" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="码云推荐" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_marginLeft="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_gist"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_discover_gist" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="代码片段" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_marginLeft="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_soft"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_discover_softwares" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="开源软件" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px" />
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px"
+                android:layout_marginTop="30dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_scan"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_discover_scan" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="扫一扫" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px"
+                android:layout_marginLeft="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_shake"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_discover_shake" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="摇一摇" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px" />
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px"
+                android:layout_marginTop="25dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_nearby"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_discover_nearby" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="附近的程序员" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px"
+                android:layout_marginLeft="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_events"
+                style="@style/linearLayout_option_item">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_my_event" />
+
+                <TextView
+                    style="@style/linearLayout_option_item_txt"
+                    android:text="线下活动" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_height="1px" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
