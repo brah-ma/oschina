@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    tools:context="com.brahma.oschina.view.fragments.NavFragment">
+
+    <com.brahma.oschina.view.widgets.NavButton
+        android:id="@+id/nav_btn_news"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.brahma.oschina.view.widgets.NavButton
+        android:id="@+id/nav_btn_tweet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/nav_btn_tweet_pub"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:src="@drawable/nav_add_selector" />
+
+    <com.brahma.oschina.view.widgets.NavButton
+        android:id="@+id/nav_btn_explore"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.brahma.oschina.view.widgets.NavButton
+        android:id="@+id/nav_btn_my"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>
+
