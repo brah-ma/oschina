@@ -16,4 +16,6 @@
 
     <color name="main_black">#333</color>
 
+    <color name="user_info_option_pressed">#1EB050</color>
+
 </resources>

@@ -10,66 +10,44 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.brahma.oschina.R;
+import com.brahma.oschina.view.widgets.SolarSystemView;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+
 public class UserInfoFragment extends Fragment {
 
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        Log.i("time","public UserInfoFragment() onAttach");
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.i("time","public UserInfoFragment() onCreate");
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Log.i("time","public UserInfoFragment() onActivityCreated");
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        Log.i("time","public UserInfoFragment() onViewCreated");
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Log.i("time","public UserInfoFragment() onDestroyView");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.i("time","public UserInfoFragment() onDestroy");
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        Log.i("time","public UserInfoFragment() onDetach");
-    }
-    public UserInfoFragment() {
-        Log.i("time","public UserInfoFragment()");
-    }
-
-
+    @BindView(R.id.ivUser)
+    ImageView ivUser;
+    @BindView(R.id.view_solar_system)
+    SolarSystemView mSolarView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("time","public UserInfoFragment() onCreateView");
-        return inflater.inflate(R.layout.fragment_user_info, container, false);
+
+        View view=inflater.inflate(R.layout.fragment_user_info, container, false);
+        ButterKnife.bind(this,view);
+        view.post(new Runnable() {
+            @Override
+            public void run() {
+                float x=ivUser.getX();
+                float y=ivUser.getY();
+                int width=ivUser.getWidth();
+                int height=ivUser.getHeight();
+                int w=Math.max(width,height);
+                float pivotX=x+width/2;
+                float pivotY=y+height/2;
+
+                mSolarView.init(pivotX,pivotY,w/2);
+            }
+        });
+        return view;
     }
+
 
 }

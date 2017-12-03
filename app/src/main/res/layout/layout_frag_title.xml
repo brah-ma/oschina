@@ -25,7 +25,7 @@
         android:layout_margin="2dp"
         android:padding="6dp"
         android:clickable="true"
-        android:background="@drawable/ic_search_bg"
+        android:background="@drawable/ic_title_bar_icon_bg"
         android:src="@mipmap/btn_search_normal"
         />
 </RelativeLayout>
